@@ -1,0 +1,14 @@
+.classpath
+.project
+*.settings
+*.class
+*.log
+.gwt-log
+target
+war
+gwt-unitCache
+*~
+.idea/
+*.iml
+.gitignore
+arender-sample-war/overlays/
