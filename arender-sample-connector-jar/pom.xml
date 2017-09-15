@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>arender-sample-connector</artifactId>
+    <artifactId>arender-sample-connector-jar</artifactId>
     <packaging>jar</packaging>
 
     <name>Arender - Sample connector</name>

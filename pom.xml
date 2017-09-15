@@ -19,8 +19,8 @@
     </properties>
 
     <modules>
-        <module>arender-sample-connector</module>
-        <module>arender-sample-war</module>
+        <module>arender-sample-connector-jar</module>
+        <module>arender-sample-connector-war</module>
     </modules>
 
 </project>
