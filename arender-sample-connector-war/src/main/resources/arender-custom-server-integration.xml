@@ -6,6 +6,10 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- xml imported by ARender Java Web Server side, please add any customization you wish to see loaded in this file-->
-	
+
+	<bean id="sampleURLParser" class="com.arondor.arender.sample.connector.SampleURLParser"
+		  scope="prototype">
+	</bean>
+
 </beans>
 
