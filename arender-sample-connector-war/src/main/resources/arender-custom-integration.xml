@@ -6,6 +6,81 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- xml imported by ARender for Client Javascript configurations, please add any customization you wish to see loaded in this file-->
+
+	<!-- Sample implementation of a Custom button -->
+	<bean id="customButton"
+		  class="com.arondor.viewer.client.toppanel.presenter.ButtonPresenter"
+		  scope="prototype">
+		<property name="enabled" value="true" />
+		<property name="imageResource">
+			<bean
+					class="com.arondor.viewer.client.defferedmodules.ExternalImageResource">
+				<property name="width" value="32" />
+				<property name="height" value="32" />
+				<property name="url" value="icons/forward.png" />
+			</bean>
+		</property>
+		<property name="buttonTitle" value="Custom Button"/>
+		<property name="buttonHandler">
+			<bean class="com.arondor.viewer.client.jsapi.toppanel.JSCallButtonHandler">
+				<property name="jsCode">
+					<value>
+						try
+						{
+						alert('Hello world !');
+						$wnd.getARenderJS().getGenericNotificationJSAPI().askNotification("hello");
+						alert("Finished !");
+						}
+						catch(e)
+						{
+						alert("error !" + e);
+						}
+					</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<!-- Adding the bean ref to customButton to the list of available widgets -->
+	<bean id="topPanel" class="com.arondor.viewer.client.toppanel.TopPanel">
+		<property name="orderedNamedList" value="${topPanel.widgets.beanNames}" />
+		<property name="containedWidgets">
+			<list>
+				<ref bean="customButton" />
+				<ref bean="logo" />
+				<ref bean="documentMenu" />
+				<ref bean="printButton" />
+				<ref bean="annotationMenu" />
+				<ref bean="cropBoxButton" />
+				<ref bean="homeButton"/>
+				<ref bean="fileButton"/>
+				<ref bean="textSelectionSwitch"/>
+				<ref bean="saveDirtyAnnotations" />
+				<ref bean="refreshAnnotation" />
+				<ref bean="addObfuscateAnnotationButton" />
+				<ref bean="addObfuscateZoneAnnotationButton" />
+				<ref bean="ImageProcessingVerticalSubMenu" />
+				<ref bean="navigationButtons" />
+				<ref bean="multiViewTools" />
+				<ref bean="zoomButtons" />
+				<ref bean="rotationButtons" />
+				<ref bean="scrollAnnotationToolbar"/>
+				<ref bean="annotationToolbar" />
+				<ref bean="annotationsButton"/>
+				<ref bean="searchBox" />
+				<ref bean="fullscreenButton" />
+
+				<ref bean="documentBuilderButton" />
+				<!-- <ref bean="plumeButton" /> -->
+				<!-- <ref bean="saveRotateHighlightDocument" /> -->
+
+				<ref bean="plumeMenu" />
+			</list>
+		</property>
+		<property name="moreButton">
+			<ref bean="moreButton" />
+		</property>
+	</bean>
 	
 </beans>
 
