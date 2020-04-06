@@ -5,6 +5,7 @@ import com.arondor.viewer.client.api.document.DocumentId;
 import com.arondor.viewer.client.api.document.metadata.DocumentMetadata;
 import com.arondor.viewer.common.documentaccessor.DocumentAccessorByteArray;
 import com.arondor.viewer.rendition.api.annotation.AnnotationAccessor;
+import com.arondor.viewer.rendition.api.document.BinaryDocumentAccessor;
 import com.arondor.viewer.rendition.api.document.DocumentAccessor;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Logger;
@@ -96,7 +97,7 @@ public class SampleDocumentAccessor implements DocumentAccessor
 
     public DocumentAccessor asSerializableDocumentAccessor() throws IOException
     {
-        return new DocumentAccessorByteArray(getUUID(), getInputStream());
+        return new BinaryDocumentAccessor(this);
     }
 
     public DocumentMetadata getDocumentMetadata()
