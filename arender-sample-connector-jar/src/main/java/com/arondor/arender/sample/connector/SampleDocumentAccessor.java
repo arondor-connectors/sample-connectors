@@ -49,7 +49,7 @@ public class SampleDocumentAccessor implements DocumentAccessor
 
     public String getDocumentTitle()
     {
-        return this.documentTitle;
+        return "ARender-doc-demo.pdf";
     }
 
     public void setDocumentTitle(String documentTitle)

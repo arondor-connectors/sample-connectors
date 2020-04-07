@@ -11,5 +11,44 @@
 		  scope="prototype">
 	</bean>
 
+	<bean id="sampleXFDFAnnotationAccessor"
+		  class="com.arondor.arender.sample.connector.SampleXFDFAnnotationAccessor"
+		  scope="prototype">
+		<property name="contentAccessor">
+			<bean
+					class="com.arondor.viewer.xfdf.annotation.FileSerializedContentAccessor">
+				<property name="path"
+						  value="${arender.server.annotations.xfdf.localstorage.default.path}" />
+			</bean>
+		</property>
+		<!-- <property name="recoverCDATA" value="true" /> -->
+
+
+		<property name="annotationCreationPolicy">
+			<bean
+					class="com.arondor.viewer.client.api.annotation.AnnotationCreationPolicy">
+				<property name="canCreateAnnotations"
+						  value="${arender.server.annotations.can.create}" />
+				<property name="textAnnotationsSupportHtml"
+						  value="${arender.server.annotations.text.html.support}" />
+				<property name="textAnnotationsSupportReply"
+						  value="${arender.server.annotations.text.reply.support}" />
+				<property name="textAnnotationsSupportStatus"
+						  value="${arender.server.annotations.text.status.support}" />
+				<property name="textAnnotationsCommentSupportReply"
+						  value="${arender.server.annotations.text.comment.reply.support}" />
+
+				<!-- For each annotation, show a list of security levels to choose from -->
+				<property name="annotationsSupportSecurity"
+						  value="${arender.server.annotations.text.security.support}" />
+				<property name="availableSecurityLevels"
+						  ref="availableSecurityLevels" />
+				<property name="annotationTemplateCatalog"
+						  ref="annotationTemplateCatalog" />
+			</bean>
+		</property>
+
+	</bean>
+
 </beans>
 
