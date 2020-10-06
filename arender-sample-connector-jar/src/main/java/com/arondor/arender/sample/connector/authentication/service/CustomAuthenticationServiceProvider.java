@@ -8,14 +8,20 @@ import com.arondor.viewer.rendition.api.document.DocumentService;
 
 public class CustomAuthenticationServiceProvider implements AuthenticationServiceProvider
 {
-    private static final String ROLE_ADMIN = "customUser";
+    private static final String AUTHORIZED_USER = "customUser";
 
+    /**
+     * Method that calculates if the the current document can be redacted
+     * @param documentService
+     * @param documentId
+     * @return true if redaction is authorized, false otherwise
+     */
     public boolean isAuthorized(DocumentService documentService, DocumentId documentId)
     {
         UserContext userContext = UserContextHolder.getUserContext();
         if (userContext != null)
         {
-            return ROLE_ADMIN.equalsIgnoreCase(userContext.getUsername());
+            return AUTHORIZED_USER.equalsIgnoreCase(userContext.getUsername());
         }
         return false;
     }
