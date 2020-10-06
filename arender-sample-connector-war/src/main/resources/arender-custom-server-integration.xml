@@ -50,5 +50,10 @@
 
 	</bean>
 
+	<!--Uncomment to activate the custom authentication service provider-->
+	<!--<bean id="defaultAuthenticationServiceProvider"-->
+		  <!--class="com.arondor.viewer.common.document.authentication.service.CustomAuthenticationServiceProvider"-->
+		  <!--scope="singleton" />-->
+
 </beans>
 
