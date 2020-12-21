@@ -7,8 +7,8 @@
 
 	<!-- xml imported by ARender for Client Javascript configurations, please add any customization you wish to see loaded in this file-->
 
-	<!-- Sample implementation of a Custom button -->
-	<bean id="customButton"
+	<!-- Sample implementation of a say hello button -->
+	<bean id="sayHelloButton"
 		  class="com.arondor.viewer.client.toppanel.presenter.ButtonPresenter"
 		  scope="prototype">
 		<property name="enabled" value="true" />
@@ -41,12 +41,12 @@
 		</property>
 	</bean>
 
-	<!-- Adding the bean ref to customButton to the list of available widgets -->
+	<!-- Adding the bean ref to sayHelloButton to the list of available widgets -->
 	<bean id="topPanel" class="com.arondor.viewer.client.toppanel.TopPanel">
 		<property name="orderedNamedList" value="${topPanel.widgets.beanNames}" />
 		<property name="containedWidgets">
 			<list>
-				<ref bean="customButton" />
+				<ref bean="sayHelloButton" />
 				<ref bean="logo" />
 				<ref bean="documentMenu" />
 				<ref bean="printButton" />
@@ -59,7 +59,6 @@
 				<ref bean="refreshAnnotation" />
 				<ref bean="addObfuscateAnnotationButton" />
 				<ref bean="addObfuscateZoneAnnotationButton" />
-				<ref bean="ImageProcessingVerticalSubMenu" />
 				<ref bean="navigationButtons" />
 				<ref bean="multiViewTools" />
 				<ref bean="zoomButtons" />
@@ -75,6 +74,7 @@
 				<!-- <ref bean="saveRotateHighlightDocument" /> -->
 
 				<ref bean="plumeMenu" />
+				<ref bean="htmlPluginMenu" />
 			</list>
 		</property>
 		<property name="moreButton">
