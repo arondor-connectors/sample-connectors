@@ -21,19 +21,19 @@ import java.util.List;
 /**
  * Using this AnnotationAccessor will make annotation only editable by the creator of the annotation itself
  */
-public class SampleXFDFAnnotationAccessor extends XFDFAnnotationAccessor
+public class SampleRestrictedXFDFAnnotationAccessor extends XFDFAnnotationAccessor
 {
-    private static final Logger LOGGER = Logger.getLogger(SampleXFDFAnnotationAccessor.class);
+    private static final Logger LOGGER = Logger.getLogger(SampleRestrictedXFDFAnnotationAccessor.class);
 
     private DocumentId documentId;
 
-    public SampleXFDFAnnotationAccessor(DocumentService documentService, DocumentId documentId)
+    public SampleRestrictedXFDFAnnotationAccessor(DocumentService documentService, DocumentId documentId)
     {
         super(documentService, documentId);
         this.documentId = documentId;
     }
 
-    public SampleXFDFAnnotationAccessor(DocumentService documentService, DocumentAccessor documentAccessor)
+    public SampleRestrictedXFDFAnnotationAccessor(DocumentService documentService, DocumentAccessor documentAccessor)
     {
         super(documentService, documentAccessor);
         this.documentId = documentAccessor.getDocumentId();
