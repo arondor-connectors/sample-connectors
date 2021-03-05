@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <arender.version>4.2.1</arender.version>
+        <arender.version>4.3.1</arender.version>
         <arender.api.version>4.2.0</arender.api.version>
         <spring.arender.version>5.2.4.RELEASE</spring.arender.version>
         <spring.security.arender.version>5.2.2.RELEASE</spring.security.arender.version>

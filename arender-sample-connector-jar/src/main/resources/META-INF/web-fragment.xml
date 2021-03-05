@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-fragment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-fragment_3_0.xsd" id="WebAppFragment_ID" version="3.0">
+    <name>web_fragment_ecm</name>
+
+<!--    <filter>-->
+<!--        <filter-name>arenderServletFilter</filter-name>-->
+<!--        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>-->
+<!--        <async-supported>true</async-supported>-->
+<!--    </filter>-->
+
+<!--    <filter-mapping>-->
+<!--        <filter-name>arenderServletFilter</filter-name>-->
+<!--        <url-pattern>/ArondorViewer.jsp</url-pattern>-->
+<!--        <url-pattern>/ARender.jsp</url-pattern>-->
+<!--        <url-pattern>/ARender.html</url-pattern>-->
+<!--        <url-pattern>/DownloadDocumentWithAnnotations.jsp</url-pattern>-->
+<!--        <url-pattern>/arendergwt/*</url-pattern>-->
+<!--        <url-pattern>/openExternalDocument.jsp</url-pattern>-->
+<!--    </filter-mapping>-->
+
+</web-fragment>
