@@ -1,4 +1,4 @@
-package com.arondor.arender.sample.connector;
+package com.arondor.arender.sample.connector.annotationaccessors;
 
 import com.arondor.viewer.annotation.exceptions.AnnotationCredentialsException;
 import com.arondor.viewer.annotation.exceptions.AnnotationNotAvailableException;

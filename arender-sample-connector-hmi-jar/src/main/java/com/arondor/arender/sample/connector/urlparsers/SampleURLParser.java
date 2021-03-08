@@ -1,5 +1,6 @@
-package com.arondor.arender.sample.connector;
+package com.arondor.arender.sample.connector.urlparsers;
 
+import com.arondor.arender.sample.connector.documentaccessors.SampleDocumentAccessor;
 import com.arondor.viewer.client.api.document.DocumentFormatNotSupportedException;
 import com.arondor.viewer.client.api.document.DocumentId;
 import com.arondor.viewer.client.api.document.DocumentNotAvailableException;

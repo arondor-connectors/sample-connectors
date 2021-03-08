@@ -7,12 +7,12 @@
 
 	<!-- xml imported by ARender Java Web Server side, please add any customization you wish to see loaded in this file-->
 
-	<bean id="sampleURLParser" class="com.arondor.arender.sample.connector.SampleURLParser"
+	<bean id="sampleURLParser" class="com.arondor.arender.sample.connector.urlparsers.SampleURLParser"
 		  scope="prototype">
 	</bean>
 
 	<bean id="sampleAnnotationAccessor"
-		  class="com.arondor.arender.sample.connector.SampleAnnotationAccessor"
+		  class="com.arondor.arender.sample.connector.annotationaccessors.SampleAnnotationAccessor"
 		  scope="prototype">
 		<property name="annotationCreationPolicy">
 			<bean
@@ -46,7 +46,7 @@
 		  scope="prototype">
 		<property name="contentAccessor">
 			<bean
-					class="com.arondor.arender.sample.connector.SampleSerializedAnnotationContentAccessor">
+					class="com.arondor.arender.sample.connector.annotationaccessors.SampleSerializedAnnotationContentAccessor">
 			</bean>
 		</property>
 		<property name="annotationCreationPolicy">
@@ -76,7 +76,7 @@
 
 	<!-- Below an annotation accessor with restricted access for users -->
 	<bean id="sampleRestrictedXFDFAnnotationAccessor"
-		  class="com.arondor.arender.sample.connector.SampleRestrictedXFDFAnnotationAccessor"
+		  class="com.arondor.arender.sample.connector.annotationaccessors.SampleRestrictedXFDFAnnotationAccessor"
 		  scope="prototype">
 		<property name="contentAccessor">
 			<bean
@@ -116,7 +116,7 @@
 
 	<!--Uncomment to activate the custom authentication service provider-->
 	<!--<bean id="defaultAuthenticationServiceProvider"-->
-		  <!--class="com.arondor.viewer.common.document.authentication.service.CustomAuthenticationServiceProvider"-->
+		  <!--class="com.arondor.arender.sample.connector.authentication.service.CustomAuthenticationServiceProvider"-->
 		  <!--scope="singleton" />-->
 
 </beans>

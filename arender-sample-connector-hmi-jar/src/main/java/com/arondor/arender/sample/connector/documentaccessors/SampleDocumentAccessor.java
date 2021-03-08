@@ -1,9 +1,8 @@
-package com.arondor.arender.sample.connector;
+package com.arondor.arender.sample.connector.documentaccessors;
 
 import com.arondor.viewer.annotation.exceptions.AnnotationsNotSupportedException;
 import com.arondor.viewer.client.api.document.DocumentId;
 import com.arondor.viewer.client.api.document.metadata.DocumentMetadata;
-import com.arondor.viewer.common.documentaccessor.DocumentAccessorByteArray;
 import com.arondor.viewer.rendition.api.annotation.AnnotationAccessor;
 import com.arondor.viewer.rendition.api.document.BinaryDocumentAccessor;
 import com.arondor.viewer.rendition.api.document.DocumentAccessor;
