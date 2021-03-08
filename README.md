@@ -62,7 +62,8 @@ To test:
 
 To test:
 
-* Build the whole project and deploy the built war file in your application server
+* Build the arender-sample-connector-rendition-jar module and copy the jar file in the folder
+  rendition-engine-package-4.X.Y\modules\RenditionEngine\client_libs
 * Load in your browser the
   URL: http://localhost:8080/arender_sample_connector_war_war_exploded/?bean=sampleDocumentAccessorProxy&documentTile=MyDocumentTitle
   
