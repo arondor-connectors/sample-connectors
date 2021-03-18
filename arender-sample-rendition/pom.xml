@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>arender-sample-connector-parent</artifactId>
+        <groupId>com.arondor.arender</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>arender-sample-rendition</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>arender-sample-rendition-connector</module>
+        <module>arender-sample-rendition-package</module>
+    </modules>
+
+
+    <properties>
+        <arender.version>4.3.1</arender.version>
+        <arender.api.version>4.2.0</arender.api.version>
+        <slf4j-api.version>1.6.1</slf4j-api.version>
+        <slf4j-log4j12.version>1.6.1</slf4j-log4j12.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- ***** ARender ***** -->
+            <!-- ** ARender API **-->
+            <dependency>
+                <groupId>com.arondor.arender</groupId>
+                <artifactId>arondor-arender-rendition-api</artifactId>
+                <version>${arender.api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- ** ARender Core **-->
+<!--            <dependency>-->
+<!--                <groupId>com.arondor.arender</groupId>-->
+<!--                <artifactId>arondor-arender-common</artifactId>-->
+<!--                <version>${arender.version}</version>-->
+<!--                <scope>provided</scope>-->
+<!--            </dependency>-->
+
+            <!-- ***** Others ***** -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j-log4j12.version}</version>
+                <type>jar</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

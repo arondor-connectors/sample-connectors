@@ -46,24 +46,38 @@ Pros&cons to have the connector on HMI side:
 
 Maven structure:
 
-* A parent module
-    * A child module arender-sample-connector-hmi-jar: create a jar that is the connector,
-    * A child module arender-sample-connector-war: Fetch ARender HMI WAR, modify it by including the jar above in its
+* A parent module: arender-sample-hmi
+    * A child module: arender-sample-hmi-connector: create a jar that is the connector,
+    * A child module: arender-sample-hmi-war: Fetch ARender HMI WAR, modify it by including the jar above in its
       lib (overlay).
 
-Development entry Point: SampleURLParser.java
+Development entry Point: SampleURLParser.java: Extract URL parameters from this class
 
 To test:
 
 * Build the whole project and deploy the built war file in your application server,
-* Load in your browser the URL: http://localhost:8080/arender-sample-connector-war-1.0-SNAPSHOT/?myURLParam=anyValue
+* Load in your browser the URL: http://localhost:8080/arender-sample-hmi-war-1.0-SNAPSHOT/?myURLParam=anyValue
 
 ### Connector on Rendition side
+
+Maven structure:
+
+* A parent module: arender-sample-rendition
+    * A child module: arender-sample-connector-rendition: create a jar that is the connector,
+    * A child module: arender-sample-rendition-package:
+      * Fetch ARender Rendition zip, 
+      * Modify it by including
+        * The configuration file custom-integration.xml located in src/resources
+        * The jar above in its lib (overlay)
+
+Development tips: 
+* In the method SampleDocumentAccessorProxy.getDocumentContents(String beanName, String uniqueId, Map<String, String> 
+  properties), the **properties** parameter will contain all the parameters passed in the URL. 
 
 To test:
 
 * Build the arender-sample-connector-rendition-jar module and copy the jar file in the folder
   rendition-engine-package-4.X.Y\modules\RenditionEngine\client_libs
 * Load in your browser the
-  URL: http://localhost:8080/arender_sample_connector_war_war_exploded/?bean=sampleDocumentAccessorProxy&documentTile=MyDocumentTitle
+  URL: http://localhost:8080/arender-sample-hmi-war-1.0-SNAPSHOT/?bean=sampleDocumentAccessorProxy&documentTile=MyDocumentTitle
   

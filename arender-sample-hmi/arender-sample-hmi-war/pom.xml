@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>com.arondor.arender</groupId>
-        <artifactId>arender-sample-connector-parent</artifactId>
+        <artifactId>arender-sample-hmi</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>arender-sample-connector-war</artifactId>
+    <artifactId>arender-sample-hmi-war</artifactId>
 
     <packaging>war</packaging>
     <name>ARender HMI Sample</name>
@@ -39,9 +39,30 @@
         </dependency>
         <dependency>
             <groupId>com.arondor.arender</groupId>
+            <artifactId>arender-sample-hmi-connector</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.arondor.arender</groupId>
             <artifactId>arondor-arender-xfdf-annotation</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.arondor.arender</groupId>
+            <artifactId>arondor-arender-hmi-toppanel</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.arondor.arender</groupId>
+            <artifactId>arondor-arender-hmi-modules</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.arondor.arender</groupId>
+            <artifactId>arondor-arender-hmi-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
 
         <!-- ARender Sample Connector -->
         <dependency>
@@ -86,6 +107,14 @@
                             <Ignore-Scanning-Packages>com.thoughtworks.xstream</Ignore-Scanning-Packages>
                         </manifestEntries>
                     </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.0.2</version>
+                <configuration>
+                    <warName>ARender</warName>
                 </configuration>
             </plugin>
         </plugins>
