@@ -18,6 +18,11 @@
             <artifactId>arender-sample-connector-rendition-jar</artifactId>
             <version>${project.version}</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.arondor.arender</groupId>-->
+<!--            <artifactId>arender-sample-hmi-connector</artifactId>-->
+<!--            <version>${project.version}</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>
@@ -67,6 +72,14 @@
                                     <overWrite>true</overWrite>
                                     <outputDirectory>${basedir}/target/rendition-engine-package-sample/modules/RenditionEngine/client_libs</outputDirectory>
                                 </artifactItem>
+<!--                                <artifactItem>-->
+<!--                                    <groupId>com.arondor.arender</groupId>-->
+<!--                                    <artifactId>arender-sample-hmi-connector</artifactId>-->
+<!--                                    <version>${project.version}</version>-->
+<!--                                    <type>jar</type>-->
+<!--                                    <overWrite>true</overWrite>-->
+<!--                                    <outputDirectory>${basedir}/target/rendition-engine-package-sample/modules/RenditionEngine/client_libs</outputDirectory>-->
+<!--                                </artifactItem>-->
                             </artifactItems>
                         </configuration>
                     </execution>
@@ -77,7 +90,29 @@
                 <version>2.5</version>
                 <executions>
                     <execution>
-                        <id>config-rendition-sample</id>
+                        <id>config-rendition-sample-xml</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/resources/config/</directory>
+                                    <filtering>true</filtering>
+                                    <includes>
+                                        <include>*/**</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                            <outputDirectory>${basedir}/target/rendition-engine-package-sample/modules/RenditionEngine/config</outputDirectory>
+                            <filters>
+                                <list>${basedir}/src/main/resources/config/custom-integration.xml</list>
+                            </filters>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>config-rendition-sample-properties</id>
                         <phase>process-resources</phase>
                         <goals>
                             <goal>copy-resources</goal>
@@ -92,9 +127,9 @@
                                     </includes>
                                 </resource>
                             </resources>
-                            <outputDirectory>${basedir}/target/rendition-engine-package-sample/modules/RenditionEngine/config</outputDirectory>
+                            <outputDirectory>${basedir}/target/rendition-engine-package-sample/modules/RenditionEngine/</outputDirectory>
                             <filters>
-                                <list>${basedir}/src/main/resources/custom-integration.xml</list>
+                                <list>${basedir}/src/main/resources/application.properties</list>
                             </filters>
                         </configuration>
                     </execution>

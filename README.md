@@ -60,7 +60,7 @@ To test:
 
 ### Connector on Rendition side
 
-Maven structure:
+#### Maven structure
 
 * A parent module: arender-sample-rendition
     * A child module: arender-sample-connector-rendition: create a jar that is the connector,
@@ -70,6 +70,7 @@ Maven structure:
         * The configuration file custom-integration.xml located in src/resources
         * The jar above in its lib (overlay)
 
+#### Document Fetching
 Development tips: 
 * In the method SampleDocumentAccessorProxy.getDocumentContents(String beanName, String uniqueId, Map<String, String> 
   properties), the **properties** parameter will contain all the parameters passed in the URL. 
@@ -80,4 +81,19 @@ To test:
   rendition-engine-package-4.X.Y\modules\RenditionEngine\client_libs
 * Load in your browser the
   URL: http://localhost:8080/arender-sample-hmi-war-1.0-SNAPSHOT/?bean=sampleDocumentAccessorProxy&documentTitle=MyDocumentTitle
-  
+
+#### Annotation Fetching
+Annotation are by default managed by the HMI. 
+To configure the annotation management by the Rendition follow the below procedure (assuming the  SampleAnnotationAccessor HMI class should be used)
+
+Configuration tips
+
+* On HMI side disable the annotation management: uncomment the **delegate** bean in **arender-custom-server-integration.xml** to override useLocalDocumentAccessorForAnnotations value
+* On Rendition side
+    * Configure the annotation accessor beans: in **custom-integration.xml** uncomment the beans sampleAnnotationAccessorFactory and sampleAnnotationAccessor
+    * Configure the AnnotationAccessorFactory: in **application.properties** uncomment the property arender.external.annotation.accessor.factory.bean.name
+    * Add **arender-sample-hmi-connector** library on the **RenditionEngine/client_libs** folder (or use the maven build by uncommenting the related build)
+
+To test:
+* Load in your browser the
+  URL: http://localhost:8080/arender-sample-hmi-war-1.0-SNAPSHOT/?bean=sampleAnnotationAccessorProxy&documentTitle=MyDocumentTitle

@@ -25,11 +25,16 @@ public class SampleAnnotationAccessor implements AnnotationPageAccessor
 {
     private static final Logger LOGGER = Logger.getLogger(SampleAnnotationAccessor.class);
 
-    private final DocumentId documentId;
+    private DocumentId documentId;
 
     private AnnotationConverter annotationConverter;
 
     private AnnotationCreationPolicy annotationCreationPolicy;
+
+    public SampleAnnotationAccessor()
+    {
+
+    }
 
     /**
      * Default generic constructor, based only on the documentId

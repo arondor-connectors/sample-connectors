@@ -119,5 +119,25 @@
 		  <!--class="com.arondor.arender.sample.connector.authentication.service.CustomAuthenticationServiceProvider"-->
 		  <!--scope="singleton" />-->
 
+	<!-- Adding useLocalDocumentAccessorForAnnotations=false to activate the annotation management from the Rendition
+	Please update the below delegate bean at each ARender update -->
+<!--	<bean id="delegate"-->
+<!--		  class="com.arondor.viewer.common.rendition.connector.ClientDocumentService">-->
+<!--		<property name="useLocalDocumentAccessorForAnnotations" value="false" />-->
+<!--		<property name="remoteDocumentServiceProvider"-->
+<!--				  ref="remoteDocumentServiceProvider" />-->
+<!--		<property name="ignoreDocumentAccessorsWithExceptions"-->
+<!--				  value="${arender.server.rendition.ignore.document.accessors.with.exceptions}" />-->
+<!--		<property name="maxTries"-->
+<!--				  value="${arender.server.rendition.max.tries}" />-->
+<!--		<property name="remoteTargets" ref="remoteTargetUrls" />-->
+<!--		<property name="searchDocumentsInRenditionTargets"-->
+<!--				  value="${arender.server.rendition.search.documents}" />-->
+<!--		<property name="routingTable"-->
+<!--				  ref="routeTableMap${arender.server.routing.table.type}" />-->
+<!--		<property name="displayWatermarkProviderBeanName" value="${arender.server.watermark.display.provider}" />-->
+<!--		<property name="watermarkConfiguration" ref="watermarkConfiguration" />-->
+<!--	</bean>-->
+
 </beans>
 

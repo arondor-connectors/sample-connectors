@@ -15,7 +15,7 @@ public class SampleDocumentAccessorProxy implements ExternalDocumentAccessorProx
     private static final Logger LOGGER = LoggerFactory.getLogger(SampleDocumentAccessorProxy.class);
 
     /**
-     * Method that details how to fetch the documents
+     * Method that details how to fetch documents
      * @param beanName: the bean name passed as value of bean parameter from the URL
      * @param uniqueId: the ARender id of the document (UUID)
      * @param properties: the list of properties coming from ARender HMI (by default it is all parameter from the URL)

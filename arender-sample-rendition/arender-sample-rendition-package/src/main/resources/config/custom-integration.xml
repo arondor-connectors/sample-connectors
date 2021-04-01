@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   default-lazy-init="true" default-autowire="no"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="sampleDocumentAccessorProxy" id="sampleDocumentAccessorProxy"
+		  class="com.arondor.arender.sample.rendition.connector.SampleDocumentAccessorProxy">
+	</bean>
+
+	<bean name="sampleAnnotationAccessorProxy" id="sampleAnnotationAccessorProxy"
+		  class="com.arondor.arender.sample.rendition.connector.SampleAnnotationAccessorProxy">
+	</bean>
+
+<!--	<bean id="sampleAnnotationAccessorFactory"-->
+<!--		  class="com.arondor.viewer.common.annotation.BeanAnnotationAccessorFactory">-->
+<!--		<property name="beanName" value="sampleAnnotationAccessor" />-->
+<!--	</bean>-->
+
+<!--	<bean name="sampleAnnotationAccessor" id="sampleAnnotationAccessor"-->
+<!--		  class="com.arondor.arender.sample.connector.annotationaccessors.SampleAnnotationAccessor"/>-->
+
+</beans>
