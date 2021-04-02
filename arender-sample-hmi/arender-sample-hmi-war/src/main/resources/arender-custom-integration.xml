@@ -81,6 +81,26 @@
 			<ref bean="moreButton" />
 		</property>
 	</bean>
+
+	<bean id="saveActionCustom"
+		  class="com.arondor.viewer.client.pictree.presenter.nodeaction.TreeNodeAction">
+		<property name="enabled" value="${documentbuilder.button.custom.enabled}" />
+		<property name="availability">
+			<bean
+					class="com.arondor.viewer.client.pictree.presenter.nodeaction.TreeNodeActionAvailability$IsRoot" />
+		</property>
+		<property name="actionPlacement">
+			<value
+					type="com.arondor.viewer.client.pictree.presenter.PicTreePresenter$NodeDisplay$ActionPlacement">PLACEMENT_CHILDREN</value>
+		</property>
+		<property name="buttonTitle" value="customAction"/>
+		<property name="className" value="pictreeButton saveDocumentButton" />
+		<property name="buttonHandler">
+			<bean class="com.arondor.viewer.client.jsapi.toppanel.JSCallButtonHandler">
+				<property name="jsCode" value="$wnd.sampleSaveAll();"/>
+			</bean>
+		</property>
+	</bean>
 	
 </beans>
 
