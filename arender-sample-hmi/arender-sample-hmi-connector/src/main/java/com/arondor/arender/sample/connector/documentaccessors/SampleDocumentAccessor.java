@@ -22,7 +22,7 @@ public class SampleDocumentAccessor implements DocumentAccessor
 
     private final DocumentId documentId ;
 
-    private String myURLParam;
+    private final String urlParameterValue;
 
     private String documentTitle;
 
@@ -30,10 +30,10 @@ public class SampleDocumentAccessor implements DocumentAccessor
 
     private final DocumentMetadata documentMetadata = new DocumentMetadata();
 
-    public SampleDocumentAccessor(String myURLParam, DocumentId documentId)
+    public SampleDocumentAccessor(String urlParameterValue, DocumentId documentId)
     {
         this.documentId = documentId;
-        this.myURLParam = myURLParam;
+        this.urlParameterValue = urlParameterValue;
     }
 
     public DocumentId getUUID()
@@ -48,7 +48,7 @@ public class SampleDocumentAccessor implements DocumentAccessor
 
     public String getDocumentTitle()
     {
-        return "ARender-doc-demo.pdf";
+        return urlParameterValue;
     }
 
     public void setDocumentTitle(String documentTitle)
@@ -58,13 +58,15 @@ public class SampleDocumentAccessor implements DocumentAccessor
 
     /**
      * This is where the document has to be fetched with the parameter(s) extracted from the URL and potentially
-     * @return
-     * @throws IOException
+     * @return The document as InputStream
+     * @throws IOException: Exception to return in case of error
      */
     public InputStream getInputStream() throws IOException
     {
-        // Make the call to the service that able ARender to fetch the document.
-        String mySampleRemoteDocument = "https://arender.io/docs/ARender-doc-demo.pdf";
+        // TODO: Replace the below code by the call to your service with which the document can be downloaded
+        // To test the below code use below values for myURLParam:
+        // pdf-reference-doc-base.pdf, ARender-2019.pdf, mail-arender.eml
+        String mySampleRemoteDocument = "https://arender.io/docs/demo/" + urlParameterValue;
         URL url = new URL(mySampleRemoteDocument);
         return url.openStream();
     }

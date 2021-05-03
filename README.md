@@ -56,7 +56,9 @@ Development entry Point: SampleURLParser.java: Extract URL parameters from this 
 To test:
 
 * Build the whole project and deploy the built war file in your application server,
-* Load in your browser the URL: http://localhost:8080/arender-sample-hmi-war-1.0-SNAPSHOT/?myURLParam=anyValue
+* Load in your browser one of the URL below: 
+  * http://localhost:8080/arender-sample-hmi-war-1.0-SNAPSHOT/?myURLParam=ARender-2019.pdf
+  * http://localhost:8080/arender-sample-hmi-war-1.0-SNAPSHOT/?myURLParam=ARender-2019.pdf&myURLParam=mail-arender.eml
 
 ### Connector on Rendition side
 
