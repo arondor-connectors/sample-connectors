@@ -20,4 +20,13 @@
 <!--	<bean name="sampleAnnotationAccessor" id="sampleAnnotationAccessor"-->
 <!--		  class="com.arondor.arender.sample.connector.annotationaccessors.SampleAnnotationAccessor"/>-->
 
+<!--	Below two beans configuration to uncomment if usage of Rendition connector with SampleURLParser-->
+<!--	<bean id="urlParserExternalAccessorProxy" class="com.arondor.viewer.common.document.UrlParserExternalAccessorProxy">-->
+<!--		<property name="urlParser" ref="sampleURLParser"/>-->
+<!--	</bean>-->
+
+<!--	<bean id="sampleURLParser" class="com.arondor.arender.sample.connector.urlparsers.SampleURLParser"-->
+<!--		  scope="prototype">-->
+<!--	</bean>-->
+
 </beans>
