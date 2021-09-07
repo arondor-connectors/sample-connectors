@@ -15,6 +15,11 @@
     <dependencies>
         <dependency>
             <groupId>com.arondor.arender</groupId>
+            <artifactId>arender-sample-hmi-connector</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.arondor.arender</groupId>
             <artifactId>arender-sample-connector-rendition-jar</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -88,6 +93,14 @@
                         </goals>
                         <configuration>
                             <artifactItems>
+                                <artifactItem>
+                                    <groupId>com.arondor.arender</groupId>
+                                    <artifactId>arender-sample-hmi-connector</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>jar</type>
+                                    <overWrite>true</overWrite>
+                                    <outputDirectory>${basedir}/target/rendition-engine-package-sample/modules/RenditionEngine/client_libs</outputDirectory>
+                                </artifactItem>
                                 <artifactItem>
                                     <groupId>com.arondor.arender</groupId>
                                     <artifactId>arender-sample-connector-rendition-jar</artifactId>

@@ -12,21 +12,21 @@
 		  class="com.arondor.arender.sample.rendition.connector.SampleAnnotationAccessorProxy">
 	</bean>
 
-<!--	<bean id="sampleAnnotationAccessorFactory"-->
-<!--		  class="com.arondor.viewer.common.annotation.BeanAnnotationAccessorFactory">-->
-<!--		<property name="beanName" value="sampleAnnotationAccessor" />-->
-<!--	</bean>-->
+	<bean id="sampleAnnotationAccessorFactory"
+		  class="com.arondor.viewer.common.annotation.BeanAnnotationAccessorFactory">
+		<property name="beanName" value="sampleAnnotationAccessor" />
+	</bean>
 
-<!--	<bean name="sampleAnnotationAccessor" id="sampleAnnotationAccessor"-->
-<!--		  class="com.arondor.arender.sample.connector.annotationaccessors.SampleAnnotationAccessor"/>-->
+	<bean name="sampleAnnotationAccessor" id="sampleAnnotationAccessor"
+		  class="com.arondor.arender.sample.connector.annotationaccessors.SampleAnnotationAccessor"/>
 
 <!--	Below two beans configuration to uncomment if usage of Rendition connector with SampleURLParser-->
-<!--	<bean id="urlParserExternalAccessorProxy" class="com.arondor.viewer.common.document.UrlParserExternalAccessorProxy">-->
-<!--		<property name="urlParser" ref="sampleURLParser"/>-->
-<!--	</bean>-->
+	<bean id="urlParserExternalAccessorProxy" class="com.arondor.viewer.common.document.UrlParserExternalAccessorProxy">
+		<property name="urlParser" ref="sampleURLParser"/>
+	</bean>
 
-<!--	<bean id="sampleURLParser" class="com.arondor.arender.sample.connector.urlparsers.SampleURLParser"-->
-<!--		  scope="prototype">-->
-<!--	</bean>-->
+	<bean id="sampleURLParser" class="com.arondor.arender.sample.connector.urlparsers.SampleURLParser"
+		  scope="prototype">
+	</bean>
 
 </beans>
