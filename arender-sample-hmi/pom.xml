@@ -31,27 +31,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- ***** ARender ***** -->
-            <!-- ** ARender API **-->
-            <dependency>
-                <groupId>com.arondor.arender</groupId>
-                <artifactId>arondor-arender-client-api</artifactId>
-                <version>${arender.api.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.arondor.arender</groupId>
-                <artifactId>arondor-arender-annotation-api</artifactId>
-                <version>${arender.api.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.arondor.arender</groupId>
-                <artifactId>arondor-arender-rendition-api</artifactId>
-                <version>${arender.api.version}</version>
-                <scope>provided</scope>
-            </dependency>
-
             <!-- ** ARender Core **-->
             <dependency>
                 <groupId>com.arondor.arender</groupId>
@@ -105,19 +84,6 @@
                 <version>${project.version}</version>
             </dependency>
 
-            <!-- ***** Others ***** -->
-            <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>javax.servlet-api</artifactId>
-                <version>${servlet-api.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>log4j</groupId>
-                <artifactId>log4j</artifactId>
-                <version>${log4j.version}</version>
-                <scope>provided</scope>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
