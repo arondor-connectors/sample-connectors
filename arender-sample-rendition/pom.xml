@@ -19,11 +19,11 @@
 
 
     <properties>
-        <arender.version>4.3.1</arender.version>
-        <arender.api.version>4.2.0</arender.api.version>
-<!--        <arondor-common-reflection.version>0.4.2</arondor-common-reflection.version>-->
-<!--        <arondor-common-mbean>3.0.1</arondor-common-mbean>-->
-<!--        <arondor-common-io>2.0.0</arondor-common-io>-->
+        <arender.version>4.6.0</arender.version>
+        <arender.api.version>4.4.0</arender.api.version>
+        <arondor-common-reflection.version>0.4.2</arondor-common-reflection.version>
+        <arondor-common-mbean>3.0.1</arondor-common-mbean>
+        <arondor-common-io>2.0.0</arondor-common-io>
         <slf4j-api.version>1.6.1</slf4j-api.version>
         <slf4j-log4j12.version>1.6.1</slf4j-log4j12.version>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -43,52 +43,52 @@
 
             <!-- ** ARender Core **-->
 <!--            Below dependencies to uncomment if Rendition connector is used -->
-<!--            <dependency>-->
-<!--                <groupId>com.arondor.arender</groupId>-->
-<!--                <artifactId>arondor-arender-common</artifactId>-->
-<!--                <version>${arender.version}</version>-->
-<!--                <scope>provided</scope>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.arondor.arender</groupId>-->
-<!--                <artifactId>arender-sample-hmi-connector</artifactId>-->
-<!--                <version>${project.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.arondor.common.reflection</groupId>-->
-<!--                <artifactId>arondor-common-reflection-api</artifactId>-->
-<!--                <version>${arondor-common-reflection.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.arondor.common.reflection</groupId>-->
-<!--                <artifactId>arondor-common-reflection-api</artifactId>-->
-<!--                <version>${arondor-common-reflection.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.arondor.common.reflection</groupId>-->
-<!--                <artifactId>arondor-common-reflection-mbean</artifactId>-->
-<!--                <version>${arondor-common-reflection.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.arondor.common.reflection</groupId>-->
-<!--                <artifactId>arondor-common-reflection-model</artifactId>-->
-<!--                <version>${arondor-common-reflection.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.arondor.common.reflection</groupId>-->
-<!--                <artifactId>arondor-common-reflection-noreflect</artifactId>-->
-<!--                <version>${arondor-common-reflection.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.arondor.common.reflection</groupId>-->
-<!--                <artifactId>arondor-common-reflection-parser</artifactId>-->
-<!--                <version>${arondor-common-reflection.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.arondor.common</groupId>-->
-<!--                <artifactId>arondor-common-mbean</artifactId>-->
-<!--                <version>${arondor-common-mbean}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>com.arondor.arender</groupId>
+                <artifactId>arondor-arender-common</artifactId>
+                <version>${arender.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.arondor.arender</groupId>
+                <artifactId>arender-sample-hmi-connector</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.arondor.common.reflection</groupId>
+                <artifactId>arondor-common-reflection-api</artifactId>
+                <version>${arondor-common-reflection.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.arondor.common.reflection</groupId>
+                <artifactId>arondor-common-reflection-api</artifactId>
+                <version>${arondor-common-reflection.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.arondor.common.reflection</groupId>
+                <artifactId>arondor-common-reflection-mbean</artifactId>
+                <version>${arondor-common-reflection.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.arondor.common.reflection</groupId>
+                <artifactId>arondor-common-reflection-model</artifactId>
+                <version>${arondor-common-reflection.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.arondor.common.reflection</groupId>
+                <artifactId>arondor-common-reflection-noreflect</artifactId>
+                <version>${arondor-common-reflection.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.arondor.common.reflection</groupId>
+                <artifactId>arondor-common-reflection-parser</artifactId>
+                <version>${arondor-common-reflection.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.arondor.common</groupId>
+                <artifactId>arondor-common-mbean</artifactId>
+                <version>${arondor-common-mbean}</version>
+            </dependency>
 
             <!-- ***** Others ***** -->
             <dependency>

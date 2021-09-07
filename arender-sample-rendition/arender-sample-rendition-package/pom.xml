@@ -13,16 +13,12 @@
     <artifactId>arender-sample-rendition-package</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.arondor.arender</groupId>
-            <artifactId>arender-sample-connector-rendition-jar</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-<!--            Below dependencies to uncomment if Rendition connector is used -->
 <!--        <dependency>-->
 <!--            <groupId>com.arondor.arender</groupId>-->
-<!--            <artifactId>arender-sample-hmi-connector</artifactId>-->
+<!--            <artifactId>arender-sample-connector-rendition-jar</artifactId>-->
+<!--            <version>${project.version}</version>-->
 <!--        </dependency>-->
+<!--            Below dependencies to uncomment if Rendition connector is used -->
 <!--        <dependency>-->
 <!--            <groupId>com.arondor.arender</groupId>-->
 <!--            <artifactId>arondor-arender-common</artifactId>-->
@@ -92,18 +88,18 @@
                         </goals>
                         <configuration>
                             <artifactItems>
+<!--                                <artifactItem>-->
+<!--                                    <groupId>com.arondor.arender</groupId>-->
+<!--                                    <artifactId>arender-sample-connector-rendition-jar</artifactId>-->
+<!--                                    <version>${project.version}</version>-->
+<!--                                    <type>jar</type>-->
+<!--                                    <overWrite>true</overWrite>-->
+<!--                                    <outputDirectory>${basedir}/target/rendition-engine-package-sample/modules/RenditionEngine/client_libs</outputDirectory>-->
+<!--                                </artifactItem>-->
                                 <artifactItem>
                                     <groupId>com.arondor.arender</groupId>
-                                    <artifactId>arender-sample-connector-rendition-jar</artifactId>
-                                    <version>${project.version}</version>
-                                    <type>jar</type>
-                                    <overWrite>true</overWrite>
-                                    <outputDirectory>${basedir}/target/rendition-engine-package-sample/modules/RenditionEngine/client_libs</outputDirectory>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>com.arondor.arender</groupId>
-                                    <artifactId>arender-sample-hmi-connector</artifactId>
-                                    <version>${project.version}</version>
+                                    <artifactId>arender-omnidocs-connector</artifactId>
+                                    <version>1.0</version>
                                     <type>jar</type>
                                     <overWrite>true</overWrite>
                                     <outputDirectory>${basedir}/target/rendition-engine-package-sample/modules/RenditionEngine/client_libs</outputDirectory>
