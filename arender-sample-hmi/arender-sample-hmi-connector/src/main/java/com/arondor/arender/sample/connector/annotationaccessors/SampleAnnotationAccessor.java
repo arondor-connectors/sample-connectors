@@ -29,7 +29,7 @@ public class SampleAnnotationAccessor implements AnnotationPageAccessor
 
     private AnnotationConverter annotationConverter;
 
-    private AnnotationCreationPolicy annotationCreationPolicy;
+    private AnnotationCreationPolicy annotationCreationPolicy = new AnnotationCreationPolicy();
 
     public SampleAnnotationAccessor()
     {
