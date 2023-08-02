@@ -19,7 +19,6 @@
 
 
     <properties>
-        <arender.version>4.6.0</arender.version>
         <arondor-common-mbean>3.0.1</arondor-common-mbean>
     </properties>
 

@@ -1,8 +1,12 @@
 package com.arondor.arender.sample.rendition.connector;
 
+import com.arondor.viewer.client.api.document.DocumentFormatNotSupportedException;
+import com.arondor.viewer.client.api.document.DocumentLayout;
+import com.arondor.viewer.client.api.document.DocumentNotAvailableException;
 import com.arondor.viewer.rendition.api.annotation.AnnotationAccessor;
 import com.arondor.viewer.rendition.api.document.ExternalAnnotationAccessorProxy;
 
+import java.io.IOException;
 import java.util.Map;
 
 /**
@@ -25,5 +29,4 @@ public class SampleAnnotationAccessorProxy extends SampleDocumentAccessorProxy
     {
         return null;
     }
-
 }
