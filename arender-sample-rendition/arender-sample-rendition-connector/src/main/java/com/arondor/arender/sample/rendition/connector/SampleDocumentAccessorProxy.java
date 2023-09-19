@@ -1,5 +1,9 @@
 package com.arondor.arender.sample.rendition.connector;
 
+import com.arondor.viewer.client.api.document.DocumentFormatNotSupportedException;
+import com.arondor.viewer.client.api.document.DocumentLayout;
+import com.arondor.viewer.client.api.document.DocumentNotAvailableException;
+import com.arondor.viewer.client.api.document.DocumentPageLayout;
 import com.arondor.viewer.rendition.api.document.ExternalDocumentAccessorProxy;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
@@ -35,7 +39,7 @@ public class SampleDocumentAccessorProxy implements ExternalDocumentAccessorProx
 //        InputStream myDocument = myService.getDocument(id, token);
 
         // Below an example for the document to be shown
-        String mySampleRemoteDocument = "https://arender.io/pdf/pdf/PDFReference15_v5.pdf";
+        String mySampleRemoteDocument = "https://demo.arender.io/docs/demo/PDFReference15_v5.pdf";
         URL url = new URL(mySampleRemoteDocument);
         return url.openStream();
     }
@@ -44,5 +48,12 @@ public class SampleDocumentAccessorProxy implements ExternalDocumentAccessorProx
             Map<String, String> properties) throws IOException
     {
         return IOUtils.toByteArray(getDocumentContents(beanName, uniqueId, properties));
+    }
+
+    @Override
+    public DocumentLayout getDocumentLayout(Map<String, String> map)
+            throws DocumentFormatNotSupportedException, DocumentNotAvailableException, IOException
+    {
+        return null;
     }
 }

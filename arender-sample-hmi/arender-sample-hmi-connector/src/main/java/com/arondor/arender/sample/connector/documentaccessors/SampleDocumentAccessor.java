@@ -66,7 +66,7 @@ public class SampleDocumentAccessor implements DocumentAccessor
         // TODO: Replace the below code by the call to your service with which the document can be downloaded
         // To test the below code use below values for myURLParam:
         // pdf-reference-doc-base.pdf, ARender-2019.pdf, mail-arender.eml
-        String mySampleRemoteDocument = "https://arender.io/docs/demo/" + urlParameterValue;
+        String mySampleRemoteDocument = "https://demo.arender.io/docs/demo/" + urlParameterValue;
         URL url = new URL(mySampleRemoteDocument);
         return url.openStream();
     }

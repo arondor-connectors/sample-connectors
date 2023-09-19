@@ -88,7 +88,7 @@ You can either:
 * Build the arender-sample-connector-rendition-jar module and copy the jar file in the folder
   rendition-engine-package-4.X.Y\modules\RenditionEngine\client_libs
 * Load in your browser the URL: 
-  * http://localhost:8080/arender-sample-hmi-war-1.0-SNAPSHOT/?bean=urlParserExternalAccessorProxy&myURLParam=pdf-reference-doc-base.pdf&documentTitle=pdf-reference-doc-base.pdf
+  * http://localhost:8080/arender-sample-hmi-war-1.0-SNAPSHOT/?bean=urlParserExternalAccessorProxy&myURLParam=PDFReference15_v5.pdf&documentTitle=pdf-reference-doc-base.pdf
   * http://localhost:8080/arender-sample-hmi-war-1.0-SNAPSHOT/?bean=sampleDocumentAccessorProxy&documentTitle=MyDocumentTitle
   
 #### Annotation Fetching
