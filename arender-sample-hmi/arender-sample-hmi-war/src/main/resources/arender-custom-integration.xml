@@ -9,18 +9,12 @@
 
 	<!-- Sample implementation of a say hello button -->
 	<bean id="sayHelloButton"
-		  class="com.arondor.viewer.client.toppanel.presenter.ButtonPresenter"
-		  scope="prototype">
+		  class="com.arondor.viewer.client.toppanel.presenter.ButtonPresenter">
+		<constructor-arg value="sayHelloButton"/>
+		<constructor-arg value="Custom Button" />
+		<constructor-arg value="standardButton icon-forward toppanelButton"/>
 		<property name="enabled" value="true" />
-		<property name="imageResource">
-			<bean
-					class="com.arondor.viewer.client.defferedmodules.ExternalImageResource">
-				<property name="width" value="32" />
-				<property name="height" value="32" />
-				<property name="url" value="icons/forward.png" />
-			</bean>
-		</property>
-		<property name="buttonTitle" value="Custom Button"/>
+		<property name="visible" value="true"/>
 		<property name="buttonHandler">
 			<bean class="com.arondor.viewer.client.jsapi.toppanel.JSCallButtonHandler">
 				<property name="jsCode">
@@ -46,40 +40,13 @@
 		<property name="orderedNamedList" value="${topPanel.widgets.beanNames}" />
 		<property name="containedWidgets">
 			<list>
-				<ref bean="sayHelloButton" />
-				<ref bean="logo" />
-				<ref bean="documentMenu" />
-				<ref bean="printButton" />
-				<ref bean="annotationMenu" />
-				<ref bean="cropBoxButton" />
-				<ref bean="homeButton"/>
-				<ref bean="fileButton"/>
-				<ref bean="textSelectionSwitch"/>
-				<ref bean="saveDirtyAnnotations" />
-				<ref bean="refreshAnnotation" />
-				<ref bean="addObfuscateAnnotationButton" />
-				<ref bean="addObfuscateZoneAnnotationButton" />
-				<ref bean="navigationButtons" />
-				<ref bean="multiViewTools" />
-				<ref bean="zoomButtons" />
-				<ref bean="rotationButtons" />
 				<ref bean="scrollAnnotationToolbar"/>
-				<ref bean="annotationToolbar" />
-				<ref bean="annotationsButton"/>
-				<ref bean="searchBox" />
-				<ref bean="fullscreenButton" />
-
-				<ref bean="documentBuilderButton" />
-				<!-- <ref bean="plumeButton" /> -->
-				<!-- <ref bean="saveRotateHighlightDocument" /> -->
-
-				<ref bean="plumeMenu" />
-				<ref bean="htmlPluginMenu" />
 			</list>
 		</property>
 		<property name="moreButton">
 			<ref bean="moreButton" />
 		</property>
+		<property name="openAnnotationToolbarAtStartup" value="#{ ${toolbar.menu.annotation.startup.enabled} and ${topPanel.annotationMenu} }" />
 	</bean>
 
 	<bean id="saveActionCustom"
@@ -94,7 +61,7 @@
 					type="com.arondor.viewer.client.pictree.presenter.PicTreePresenter$NodeDisplay$ActionPlacement">PLACEMENT_CHILDREN</value>
 		</property>
 		<property name="buttonTitle" value="customAction"/>
-		<property name="className" value="pictreeButton saveDocumentButton" />
+		<property name="className" value="pictreeButton icon-save" />
 		<property name="buttonHandler">
 			<bean class="com.arondor.viewer.client.jsapi.toppanel.JSCallButtonHandler">
 				<property name="jsCode" value="$wnd.sampleSaveAll();"/>

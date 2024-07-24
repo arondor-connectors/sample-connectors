@@ -39,6 +39,25 @@
 		</property>
 	</bean>
 
+	<bean id="sampleUserRestrictedAnnotationAccessor"
+		  class="com.arondor.arender.sample.connector.annotationaccessors.SampleUserRestrictedAnnotationAccessor"
+		  scope="prototype">
+		<property name="readOnlyUsersList" ref="readOnlyUsersList" />
+		<property name="disabledAnnotationCreationUsersList" ref="disabledAnnotationCreationUsersList" />
+	</bean>
+
+	<bean id="readOnlyUsersList"
+		  class="org.springframework.util.StringUtils"
+		  factory-method="commaDelimitedListToStringArray">
+		<constructor-arg value="${arender.server.read.only.annotations.user}" />
+	</bean>
+
+	<bean id="disabledAnnotationCreationUsersList"
+		  class="org.springframework.util.StringUtils"
+		  factory-method="commaDelimitedListToStringArray">
+		<constructor-arg value="${arender.server.disable.annotations.creation.user}" />
+	</bean>
+
 	<!-- Class to use only if all XFDF annotations of one document are saved in the same inputStream
 	and specific call needs to be done to get/update annotation -->
 	<bean id="sampleXFDFAnnotationAccessor"

@@ -11,10 +11,12 @@
     <modules>
         <module>arender-sample-hmi</module>
         <module>arender-sample-rendition</module>
+        <module>arender-sample-hmi-springboot</module>
     </modules>
 
     <properties>
-        <arender.version>4.8.12</arender.version>
+        <arender.version>2023.2.2</arender.version>
+        <spring.boot.version>2.7.18</spring.boot.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>

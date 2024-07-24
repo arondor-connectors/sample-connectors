@@ -45,10 +45,17 @@ public class ArenderServletFilter implements Filter
         // initialisation handled by Spring
     }
 
+    @Override public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+            throws IOException, ServletException
+    {
+        chain.doFilter(request, response);
+    }
+
     /**
      * Method which intercepts all request matching with the url-pattern in arender web.xml
      * Blocks the process if the transition is not validated
      */
+    /*
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException
@@ -83,6 +90,7 @@ public class ArenderServletFilter implements Filter
         }
         ((HttpServletResponse) response).sendRedirect("/ARender/error.jsp");
     }
+    */
 
     /**
      * Check if the token is a valid token returns true if it is, false otherwise
