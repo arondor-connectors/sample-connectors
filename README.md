@@ -21,19 +21,31 @@ Both of these modules can have connectors.
 
 ### Connector
 
-Maven structure:
+#### V4 Maven structure for the arender-sample-v4 module:
 
 * A parent module: arender-sample-hmi
-    * A child module: arender-sample-hmi-connector: create a jar that is the connector,
+    * A child module: arender-sample-hmi-connector-v4: create a jar that is the connector,
     * A child module: arender-sample-hmi-war: Fetch ARender HMI WAR, modify it by including the jar above in its
       lib (overlay).
 
-* Development key classes: 
-    * SampleURLParser.java: Extract URL parameters from this class
-    * SampleDocumentAccessor.java: Document fetching describer
-    * SampleAnnotationAccessor.java: Annotation CRUD
+#### V2023 Maven structure for the arender-sample-v2023 module:
 
-## Connector Deployment
+A module: arender-sample-hmi-connector-v2023: create a jar that is the connector and its dependencies and configurations.
+
+#### Development key classes: 
+
+* SampleURLParser.java: Extract URL parameters from this class
+* SampleDocumentAccessor.java: Document fetching describer
+* SampleAnnotationAccessor.java: Annotation CRUD
+
+## V2023 Connector Deployment
+
+In 2023, a connector must contain all its dependencies and configuration files, this is commonly called a "fat JAR".
+
+For deployment, it will only have to download the arondor-arender-hmi-spring-boot-package from the artifactory
+and include the connector JAR file.
+
+## V4 Connector Deployment
 
 ### On which module should I develop my connector?
 
@@ -58,7 +70,26 @@ Pros&cons to have the connector on HMI side:
 * Cons:
     * Packaging a little more complicated: It has to be done after the installation of the Rendition
 
-### Deployment
+### V2023 Deployment 
+
+#### Deploy
+
+* Download the arondor-arender-hmi-spring-boot-package-2023.2.0 from the artifactory.
+* Build the arender-sample-hmi-connector-v2023 module with maven.
+* Copy and paste the generated JAR arender-sample-hmi-connector-v2023-1.0-SNAPSHOT.jar into the lib/ folder.
+
+#### To test
+
+* Start the RenditionEngine
+* Start the Spring Boot application with the following command:
+```
+java -jar arondor-arender-hmi-spring-boot-2023.2.0.jar
+```
+* Load in your browser one of the URL below:
+  * http://localhost:8080/arender-sample-hmi-war-1.0-SNAPSHOT/?myURLParam=ARender-2019.pdf
+  * http://localhost:8080/arender-sample-hmi-war-1.0-SNAPSHOT/?myURLParam=ARender-2019.pdf&myURLParam=mail-arender.eml
+
+### V4 Deployment
 
 #### Deploy the connector on HMI side
 
@@ -66,8 +97,8 @@ You can either:
 * Build the arender-sample-hmi module with Maven,
 * Build the war manually:
     * Connector jar should be placed in the WEB-INF/lib of ARender WAR,
-    * Copy the  file [arender-custom-server-integration.xml](/arender-sample-hmi/arender-sample-hmi-war/src/main/resources/arender-custom-integration.xml) in ARender WAR WEB-INF/classes
-    * Modify the file [arender-custom-server-integration.xml](/arender-sample-hmi/arender-sample-hmi-war/src/main/resources/arender-server.properties) in ARender WAR WEB-INF/classes
+    * Copy the  file [arender-custom-server-integration.xml](/arender-sample-v4/arender-sample-hmi/arender-sample-hmi-war/src/main/resources/arender-custom-integration.xml) in ARender WAR WEB-INF/classes
+    * Modify the file [arender-custom-server-integration.xml](/arender-sample-v4/arender-sample-hmi/arender-sample-hmi-war/src/main/resources/arender-server.properties) in ARender WAR WEB-INF/classes
 
 #### To test
 
