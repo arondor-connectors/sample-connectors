@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>arender-sample-v4</artifactId>
+        <groupId>com.arondor.arender</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>arender-sample-rendition</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>arender-sample-rendition-connector</module>
+        <module>arender-sample-rendition-package</module>
+    </modules>
+
+
+    <properties>
+        <arondor-common-mbean>3.0.1</arondor-common-mbean>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.arondor.arender</groupId>
+                <artifactId>arondor-arender-common</artifactId>
+                <version>${arender.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.arondor.arender</groupId>
+                <artifactId>arender-sample-hmi-connector-v4</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.arondor.common</groupId>
+                <artifactId>arondor-common-mbean</artifactId>
+                <version>${arondor-common-mbean}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
