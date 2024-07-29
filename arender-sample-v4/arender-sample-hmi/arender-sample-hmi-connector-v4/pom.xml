@@ -12,7 +12,7 @@
     <artifactId>arender-sample-hmi-connector-v4</artifactId>
     <packaging>jar</packaging>
 
-    <name>Arender - Sample connector</name>
+    <name>ARender - Sample connector V4</name>
 
     <!--Defines your connector dependencies here-->
 

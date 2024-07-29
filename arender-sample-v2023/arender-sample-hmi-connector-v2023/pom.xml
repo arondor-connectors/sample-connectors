@@ -12,7 +12,7 @@
     <artifactId>arender-sample-hmi-connector-v2023</artifactId>
     <packaging>jar</packaging>
 
-    <name>Arender - Sample connector</name>
+    <name>ARender - Sample connector</name>
 
     <!--Defines your connector dependencies here-->
 
